@@ -8,7 +8,7 @@ mongoose.connect(mongoConnection, { useNewUrlParser: true })
 const db = mongoose.connection
 // Just to test db connection:
 db.once('open', _ => {
-  console.log('Database connected: ', mongoConnection)
+  console.log('Database connected: ')
 })
 db.on('error', err => {
   console.log('Connection error:', err)
