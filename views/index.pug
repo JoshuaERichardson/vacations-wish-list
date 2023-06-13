@@ -1,0 +1,55 @@
+extends layout
+
+block content
+	div#main-banner.jumbotron.jumbotron-fluid.header-banner 
+		if locals.isAuthenticated 
+			a#nav-bar-scroller.card(href='#nav-bar') Leave your stress behind.
+		else
+			a#nav-bar-scroller.card(href='/login') Log In to start your adventures.
+
+	
+	nav #nav-bar 
+		.site-title Vacations.  You need more vacations.
+		.container.text-center 
+			p.lead 
+	
+	#main_body.row
+		#main_form_holder.col-md-3.justify-content-center 
+			form#destination_form(action="/vacationDB" method="post")
+				.form-group 
+					label(for="destination_name") Destination name 
+					input#destination_name.form-control.input(type='text' placeholder='Enter the name of the destination' name='destination_name' required)
+					p#destination_name_validation 
+				.form-group 
+					label(for="destination_location") Location 
+					input#destination_location.form-control.input(type="text" placeholder="Where is it located" name='destination_location' required)
+					p#destination_location_validation 
+				.form-group 
+					label(for="destination_description") Description 
+					textarea#destination_description.form-control.input(type="text" placeholder="Where is it located" name='description')
+				button#buttonAddToList.btn(type="submit") Submit
+		
+		#title.col-md-9.justify-content-center 
+			h4.d-flex Enter destination details 
+			#destination_card_container.col-md-12.d-flex.flex-wrap.flex-row
+				for card in cards 
+					#cardContainer.card.col-md-3
+						img.card-img-top.image(src=card.destination_picture alt="Photo of Travel")
+						.card-body 
+						h5#card-title.card-title #{card.destination_name}
+						p#card-location.card-text #{card.destination_location}
+						p#card-description.card-text #{description}
+						.d-flex.justify-content-around 
+							button#buttonEdit.btn.btn-warning Edit
+							
+							//button#buttonRemove.btn.btn-danger(onclick=deleteCard(card._id))
+								
+								
+							a(href=`/vacationDB/delete/${card._id}` target="_blank").
+							#buttonRemove.btn.btn-danger Remove 
+
+							
+
+					
+
+

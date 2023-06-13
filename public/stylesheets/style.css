@@ -1,0 +1,290 @@
+#main_banner{
+    
+  background-color: #e9ecef;
+  padding: 5%;
+}
+
+
+#main_body{
+  padding: 3%;
+  margin-top: 15vh;
+}
+
+
+#destination_card_container{
+  display:inline-block;
+  
+}
+
+#title{
+  height: 80vh;
+  overflow-y: auto;
+}
+
+
+
+#main-banner{
+  display: grid;
+  place-items: center;
+}
+
+#nav-bar-scroller {
+  background-color: darkslategrey;
+  margin: 5px 100px;
+  color: rgb(233, 230, 230);
+  padding: 3em 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Plane_icon.svg/1200px-Plane_icon.svg.png'),pointer;
+}
+
+#destination_form, .card {
+  padding: 20px;
+  border-radius: 50px;
+  background: #d1cccc;
+  box-shadow:  35px 35px 71px #b2adad,
+      -35px -35px 71px #f0ebeb;
+}
+
+.card {
+  margin: 15px;
+  border-radius: 40px;
+background: linear-gradient(45deg, #bcb8b8, #e0dada);
+box-shadow:  37px -37px 74px #bab6b6,
+           -37px 37px 74px #e8e2e2;
+}
+
+body{
+  background: #d1cccc;
+}
+
+
+.form-group{
+  padding: .5rem;
+}
+
+
+/* BUTTON */
+#buttonAddToList {
+  margin: 20px;
+border-color: #3498db;
+color: #fff;
+box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+transition: all 150ms ease-in-out;
+}
+#buttonAddToList:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  color: black;
+}
+
+
+
+.input {
+border: none;
+outline: none;
+border-radius: 15px;
+padding: 1em;
+background-color: #ccc;
+box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+transition: 300ms ease-in-out;
+}
+
+.input:focus {
+background-color: white;
+transform: scale(1.05);
+box-shadow: 13px 13px 100px #969696,
+            -13px -13px 100px #ffffff;
+}
+
+.scale-in-hor-center {
+-webkit-animation: scale-in-hor-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-hor-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.image {
+  border-radius: 30px;
+}
+
+
+
+
+
+/* 
+  Trying to do a sticky header when scrolling
+  courtesy of https://codepen.io/JGallardo/pen/ZEBbeP
+
+*/
+/* resets */
+body { margin:0px; padding:0px; }
+
+/* main */
+header {
+  height: 360px;
+  z-index: 10;
+}
+.header-banner {
+  background-color: #333;
+  background-image: url('https://media.nomadicmatt.com/2021/officeexit.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+header h1 {
+  background-color: rgba(18,72,120, 0.8);
+  color: #fff;
+  padding: 0 1rem;
+  position: absolute;
+  top: 2rem; 
+  left: 2rem;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+}
+
+nav {
+  width: 100%;
+  height: 120px;
+  background: #292f36;
+  postion: fixed;
+  z-index: 10;
+}
+
+nav div {
+  color: white;
+  font-size: 2rem;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  visibility: hidden;
+}
+.visible-title {
+  visibility: visible;
+}
+
+nav ul { 
+  list-style-type: none;
+  margin: 0 2% auto 0;
+  padding-left: 0;
+  text-align: right;
+  max-width: 100%;
+}
+nav ul li { 
+  display: inline-block; 
+  line-height: 60px;
+  margin-left: 10px;
+}
+nav ul li a {
+  text-decoration: none; 
+  color: #a9abae;
+}
+
+/* demo content */
+body { 
+  color: #292f36;
+  font-family: helvetica;
+  line-height: 1.6;
+}
+.content{ 
+  margin: 0 auto;
+  padding: 4rem 0;
+  width: 960px;
+  max-width: 100%;
+}
+article {
+  float: left;
+  width: 720px;
+}
+article p:first-of-type {
+  margin-top: 0;
+}
+aside {
+  float: right;
+  width: 120px;
+}
+p img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .content{ 
+      padding: 2rem 0;
+  }
+  article {
+      float: none;
+      margin: 0 auto;
+      width: 96%;
+  }
+  article:last-of-type {  
+      margin-bottom: 3rem;
+  }
+  aside {  
+      float: none;
+      text-align: center;
+      width: 100%;
+  }
+}
+
+
+/* 
+  ON HOVER SMOOTH SCROLLER
+*/
+#nav-bar-scroller {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  background: rgb(74, 75, 75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#nav-bar-scroller::before,
+#nav-bar-scroller::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(8, 102, 134);
+  transition: all 0.5s;
+}
+
+#nav-bar-scroller::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+#nav-bar-scroller::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+#nav-bar-scroller:hover::before,
+#nav-bar-scroller:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+#nav-bar-scroller:hover:after {
+  content: "Let's Travel.";
+}

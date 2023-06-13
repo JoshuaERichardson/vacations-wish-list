@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Bootstrap: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Import Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Import our own CSS: -->
+    <link rel="stylesheet" href="..\css\stylesheet.css">
+    <!-- Import our own JS -->
+    <script type="module">
+        import { Button, Cards, FormSubmit } from '../js/script.js' ;
+    </script>
+    <title>Vacay!!!!!!!!!!!!!!!!!!!</title>
+</head>
+<body>
+    <!--     
+    Fluid Jumbotron to occupy the entire horizontal space of the page.
+    -->
+<div class="jumbotron jumbotron-fluid header-banner" id="main-banner">
+    <!-- <a href="#nav-bar" id="nav-bar-scroller">Leave your stress behind. Let's travel.</a> -->
+    <a href="#nav-bar" class="card" id="nav-bar-scroller">Leave your stress behind.</a>
+</div>
+
+<nav id="nav-bar">
+    <div class="site-title">Vacations. You need more vacations.</div>
+    <div class="container text-center">
+        <p class="lead"></p>
+    </div>
+</nav>
+
+
+<!-- 
+    Make a single Row that will be the landing page for both the form and the cards section
+    Divided as: 25% form, 75% cards
+--->
+<div class="row" id="main_body">
+<!-- 
+    Begin the form section
+ -->
+    <div class="col-md-3 justify-content-center" id="main_form_holder">
+        <form id="destination_form">
+            <div class="form-group">
+                <label for="destination_name">Destination name</label>
+                <input id="destination_name" class="form-control input" type="text"
+                placeholder="Enter the name of the destination" required>
+                <p id="destination_name_validation"></p>
+            </div>
+            <div class="form-group">
+                <label for="destination_location">Location</label>
+                <input id="destination_location" class="form-control input" type="text"
+                placeholder="Where is it located?" required>
+                <p id="destination_location_validation"></p>
+            </div>
+            
+            <div class="form-group">
+                <label for="destination_description">Description</label>
+                <textarea id="destination_description" class="form-control input" type="text" placeholder="Where is it located?"></textarea>
+            </div>
+            <button class="btn" id="buttonAddToList">Add to list</button>
+        </form>
+    </div>
+
+
+<!-- 
+    Begin the Card Layout section
+--->
+    <div class="col-md-9 justify-content-center" id="title">
+        <h4 class="d-flex">Enter destination details</h4>
+
+        <!-- Cards generated dynamically with jQuery and javascript-->
+        <div id="destination_card_container" class="col-md-12 d-flex flex-wrap flex-row "> 
+            <!-- class="h-25 overflow-auto" -->
+            <!-- Insert each card here -->
+        </div>
+    </div> 
+</div>
+</body>
+</html>

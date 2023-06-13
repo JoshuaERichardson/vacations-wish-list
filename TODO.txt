@@ -1,0 +1,3 @@
+Recall:
+DEBUG=vacation_destinations_wishlist:* npm run devstart for hot reload.
+
