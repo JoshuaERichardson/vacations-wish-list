@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // Requirements for Mongo:
 const MongoClient = require('mongodb').MongoClient
-const mongoConnection = 'mongodb+srv://visiblePassword:Q66snvk522O4acn0@vacation.1qa4ceh.mongodb.net/vacations'
+const mongoConnection = process.env.MONGODB_URI
 // Mongoose:
 mongoose.connect(mongoConnection, { useNewUrlParser: true })
 const db = mongoose.connection
