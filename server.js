@@ -28,6 +28,9 @@ const port = process.env.PORT || 3000;
 if(!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
     config.baseURL = `http://localhost:${port}`;
 }
+else if (process.env.BASE_URL && process.env.NODE_ENV == 'production') {
+    config.baseURL = process.env.BASE_URL;
+}
 
 
 app.use(auth(config))
